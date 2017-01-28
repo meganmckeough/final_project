@@ -7,6 +7,7 @@
 	font-style: bold;
 	background-color: black;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 
@@ -189,7 +190,7 @@ header.landingPage {
 	border: 2px solid #ffddc7;
 	color: #ffddc7;
 	margin-top: 15px;
-	width: 95%;
+	width: 100%;
 	padding: 1em;
 }
 
@@ -225,7 +226,7 @@ header.landingPage {
 	border: 2px solid #c7e9ff;
 	color: #c7e9ff;
 	margin-top: 15px;
-	width: 95%;
+	width: 100%;
 	padding: 1em;
 }
 
@@ -250,7 +251,7 @@ header.landingPage {
 	border: 2px solid #dbdcff;
 	color: #dbdcff;
 	margin-top: 15px;
-	width: 95%;
+	width: 100%;
 	padding: 1em;
 }
 

@@ -9,13 +9,16 @@ $(document).ready(function () {
 	$("#eternalMobileButton").click(function () {
 		alert("Sorry, Lacuna Inc. isn't quite ready yet... Coming soon!");
 	});
-	$("#eternalMobileButton").click(function () {
-		alert("Sorry, Lacuna Inc. isn't quite ready yet... Coming soon!");
+	$("#prestigeMobileButton").click(function () {
+		alert("Sorry, Tesla is fixing this glitch... Not quite ready!");
 	});
+	$("#pulpButton").click(loadPage);
 });
 
 
-	
-
+// function loadPage (e) {
+// 	e.preventDefault();
+// 	$(this).children("a").trigger("click");
+// }
 	
 	
