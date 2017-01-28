@@ -1,4 +1,4 @@
-button {
+.button {
 	font-family: 'Arsenal', sans-serif;
 	text-align: center;
 	width: 300px;
@@ -6,7 +6,6 @@ button {
 	font-size: 16px;
 	font-style: bold;
 	background-color: black;
-	position: relative;
 	cursor: pointer;
 }
 
@@ -24,7 +23,7 @@ button {
 	font-family: 'Montserrat', sans-serif;
 }
 
-button:hover span {
+.button:hover span {  /** remove if you fix other buttons**/
 	display: none;
 }
 
@@ -88,19 +87,29 @@ header.landingPage {
 }
 
 
-button#getStarted {
+#getStarted {
 	border: 2px solid #dbdcff;
 	color: #dbdcff;
 	margin: 30px;
 	padding: 0.5em;
 }
 
-button#getStarted:hover {
+#getStarted a {
+	text-decoration: none;
+	color: #dbdcff;
+}
+
+#getstarted span:hover {
+ 	display: none;
+ 	text-decoration: none;
+}
+
+#getStarted:hover {
 	color: black;
 	background-color: #dbdcff;
 }
 
-button#getStarted:hover:before {
+#getStarted:hover:before {
 	content:"Let's go!";
 }
 
@@ -161,7 +170,7 @@ button#getStarted:hover:before {
 }
 
 .chooseFilm aside {
-	width: 550px;
+	width: 40%;
 	padding: 20px;
 	background-color: rgba(255, 255, 255, 0.75);
 }
@@ -174,23 +183,35 @@ button#getStarted:hover:before {
 	justify-content: flex-end;
 }
 
+/**class for these buttons?**/
 
-button#pulpButton {
+#pulpButton {
 	border: 2px solid #ffddc7;
 	color: #ffddc7;
 	margin-top: 15px;
-	width: 100%;
+	width: 95%;
 	padding: 1em;
 }
 
-button#pulpButton:hover {
+#pulpButton a {
+	text-decoration: none;
+	color: #ffddc7;
+}
+
+#pulpButton span:hover {
+ 	display: none;
+ 	text-decoration: none;
+}
+
+#pulpButton:hover {
 	color: black;
 	background-color: #ffddc7;
 }
 
-button#pulpButton:hover:before {
+#pulpButton:hover:before {
 	content:"C'est la vie";
 }
+
 
 .eternal {
 	background-image: url(../images/eternal.jpg);
@@ -200,20 +221,20 @@ button#pulpButton:hover:before {
 	justify-content: flex-start;
 }
 
-button#eternalButton {
+#eternalButton {
 	border: 2px solid #c7e9ff;
 	color: #c7e9ff;
 	margin-top: 15px;
-	width: 100%;
+	width: 95%;
 	padding: 1em;
 }
 
-button#eternalButton:hover {
+#eternalButton:hover {
 	color: black;
 	background-color: #c7e9ff;
 }
 
-button#eternalButton:hover:before {
+#eternalButton:hover:before {
 	content:"Each wish resign'd";
 }
 
@@ -225,25 +246,30 @@ button#eternalButton:hover:before {
 	justify-content: flex-end;
 }
 
-button#prestigeButton {
+#prestigeButton {
 	border: 2px solid #dbdcff;
 	color: #dbdcff;
 	margin-top: 15px;
-	width: 100%;
+	width: 95%;
 	padding: 1em;
 }
 
-button#prestigeButton:hover {
+#prestigeButton:hover {
 	color: black;
 	background-color: #dbdcff;
 }
 
-button#prestigeButton:hover:before {
+#prestigeButton:hover:before {
 	content:"The first part is called the Pledge...";
 }
 
 .short {
 	display: none;
+}
+
+.expandFooter i {
+	font-size: 30px;
+	padding: 10px;
 }
 
 /**PULP FICTION PAGE**/
@@ -300,6 +326,12 @@ section.end {
 	padding-right: 75px;
 }
 
+section.scroll {
+	color: #D81616;
+	padding: 30px 50px;
+	position: fixed;
+}
+
 
 /**house some of the below in media queries**/
 
@@ -338,6 +370,14 @@ nav#topBar i {
 	display: none; /** hide with display none**/
 }
 
+#mobileStarted {
+	display: none;
+}
+
+.mobileButton {
+	display: none;
+}
+
 /** MOBILE CODE **/
 
 /** IPAD not sure this is working**/
@@ -352,12 +392,19 @@ nav#topBar i {
 	}
 
 	.quote {
-		font-size: 14px;
+		font-size: 0.75em;
 	}
+
+	.chooseFilm aside {
+		width: 60%;
+		padding: 10px;
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
 }
 /** PHONE - do smaller just button version for phone - this is definitely not working**/
 
-@media (max-width: 320px) { 
+@media (max-width: 420px) { 
   	.long {
   		display: none;
   	}
@@ -366,8 +413,91 @@ nav#topBar i {
   		display: none;
   	}
 
+	.pulpInOrder img {
+		width: 500px;
+		height: auto;
+	}
+
 	.quote {
-		font-size: 14px;
+		font-size: 0.75em;
+	}
+
+	section.start {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	section.end {
+		padding-left: 100px;
+		padding-right: 100px;
+	}	
+
+	.landingPage h1 {
+		font-size: 30px;
+	}
+
+	.landingPage h2 {
+		font-size: 15px;
+	}
+
+	#getStarted {
+		display: none;
+	}
+
+	/**need to see if can get slide working**/
+
+	#mobileStarted {
+		display: block;
+		font-size: 40px;
+	}
+
+	#mobileStarted i {
+		padding: 2em 1em 1em;
+	}
+
+	.eternal aside {
+		display: none;
+	}
+
+	.pulpFiction aside {
+		display: none;
+	}
+
+	.prestige aside {
+		display: none;
+	}
+
+	.mobileButton {
+		display: block;
+		font-family: 'Arsenal', sans-serif;
+		text-align: center;
+		font-weight: 100;
+		font-size: 16px;
+		font-style: bold;
+		cursor: pointer;
+		padding: 1em;
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 100%;
+		margin: 2em;
+	}
+
+	#prestigeMobileButton {
+		border: 2px solid #dbdcff;	
+		color: #dbdcff;
+	}
+
+	#pulpMobileButton {
+		border: 2px solid #ffddc7;
+		color: #ffddc7;
+	}
+
+	#eternalMobileButton {
+		border: 2px solid #c7e9ff;
+		color: #c7e9ff;
+	}
+
+	.quote {
+		padding: 2em;
 	}
 }
 

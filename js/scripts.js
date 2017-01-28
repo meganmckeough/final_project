@@ -6,7 +6,15 @@ $(document).ready(function () {
 	$("#prestigeButton").click(function () {
 		alert("Sorry, Tesla is fixing this glitch... Not quite ready!");
 	});
+	$("#eternalMobileButton").click(function () {
+		alert("Sorry, Lacuna Inc. isn't quite ready yet... Coming soon!");
+	});
+	$("#eternalMobileButton").click(function () {
+		alert("Sorry, Lacuna Inc. isn't quite ready yet... Coming soon!");
+	});
 });
+
+
 	
 
 	
