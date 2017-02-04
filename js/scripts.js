@@ -15,13 +15,16 @@ $(document).ready(function () {
 	$("#mobileStarted a").click(slideToPage);
 	$("#normalFooter").click(expandFooter);
 	$("#topBar").hover(function (){
-		$(".social a").attr("class", "black");
-	}, function (){
-		$(".social a").removeClass("black");
-	}
-	);
+		$("#topBar a").attr("class", "black");
+		}, function (){
+			$("#topBar a").removeClass("black");
+	});
+	$(".social div").click(expandNav);
+	$(".burger").click(expandNav);
+	var w = $(window).width();
+ 	$("#mobilePadding").css("width", w);
+ 	console.log(w);
 });
-
 
 function slideToPage () {
 	var page = $($(this).attr("href"));
@@ -37,10 +40,20 @@ function expandFooter () {
 	$("footer").toggleClass("expand");
 	}
 
+function expandNav () {
+	$(".aboutNav").toggleClass("extendAbout");
+}
+/**help!!!!**/
+	if ($("#longfooter").hasClass("expand")) {
+		$(".fa-angle-double-down").show();
+		$("fa-angle-double-up").hide();
+		}
 
-// elem.scroll(function() {
-//    if(elem.scrollLeft() + elem.width() == inner.width()) {
-//        alert("end!");
-//        console.log(elem.scrollLeft() + elem.width());
-//    }
-// });
+	else {
+		$("fa-angle-double-up").show();
+		$("fa-angle-double-down").hide();
+		console.log("DONE");
+	}
+/**fix above**/
+
+

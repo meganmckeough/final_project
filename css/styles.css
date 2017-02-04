@@ -70,17 +70,19 @@ footer:hover {
 	cursor: pointer;
 }
 
+
 #topBar:hover {
 	background-color: #c7ffdd;
 	color: black;
-	cursor: pointer;
 }
 
 #topBar a {
 	text-decoration: none;
+	color: #c7e9ff;
+	cursor: pointer;
 }
 
-.social a.black {
+#topBar a.black {
 	color: black;
 }
 
@@ -97,6 +99,7 @@ footer:hover {
 footer.expand {
 	color: #c7ffdd;
 	background-color: black;
+	line-height: 1.5;
 }
 
 /**LANDING PAGE**/
@@ -148,7 +151,7 @@ footer a {
 
 .filmPage {
 	font-family: 'Playfair Display', serif;
-	color: #c7ffdd
+	color: #c7ffdd;
 }
 
 .filmPage header {
@@ -298,12 +301,44 @@ footer a {
 	display: none;
 }
 
-.expand i {
+.expand .social i {
 	font-size: 30px;
 	padding: 10px;
 }
 
 /**PULP FICTION PAGE**/
+
+.social div {
+	cursor: pointer;
+}
+
+.aboutNav {
+	display: none;
+}
+
+.aboutNav div {
+	background-color: #c7ffdd;
+	width: 50%;
+	font-family: 'IM Fell Double Pica', serif;
+	padding: 10px;
+}
+
+.aboutNav div a {
+	color: black;
+	padding: 0.4em;
+}
+
+.aboutNav.extendAbout {
+	display: block;
+	display: flex;
+	justify-content: flex-end;
+	line-height: 1.5;
+	position: fixed;
+}
+
+.burger {
+	display: none;
+}
 
 .pulpPage header {
 	position: fixed;
@@ -313,10 +348,9 @@ footer a {
 .headerPadding {
 	display: block;
 	width: 100%;
-	height: 161px;
+	height: 208px;
 }
 
-/** fix how this appears for mobile size screen - put into media Q**/
 .pulpPage h1 {   
 	color: #D81616;
 	padding: 1em 1em 0.5em;
@@ -345,6 +379,15 @@ footer a {
 	border-right: 2px dotted #D81616;
 	border-left: 2px dotted #D81616;
 	width: 300px;
+}
+
+#blankPadding div {
+	height: 100px;
+	width: 80%;
+}
+
+#mobilePadding div {
+	display: none;
 }
 
 section.start {
@@ -430,6 +473,15 @@ nav#topBar i {
 		background-color: rgba(255, 255, 255, 0.7);
 	}
 
+	#blankPadding div {
+		display: none;
+	}
+
+	#mobilePadding div {
+		display: block;
+		height: 100px;
+	}
+
 }
 /** PHONE - do smaller just button version for phone - this is definitely not working**/
 
@@ -468,9 +520,6 @@ nav#topBar i {
 	#landingPage h2 {
 		font-size: 15px;
 	}
-
-
-	/**need to see if can get slide working**/
 
 	.eternal aside {
 		display: none;
@@ -522,6 +571,25 @@ nav#topBar i {
 
 	.quote {
 		padding: 2em;
+	}
+
+	nav#topBar .social {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+		text-align: right;
+	}
+
+/**once this is fixed mobile is done**/
+	#blankPadding div {
+		display: none;
+	}
+
+	#mobilePadding div {
+		display: block;
+		height: 100px;
 	}
 }
 
