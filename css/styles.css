@@ -1,7 +1,6 @@
 .button {
 	font-family: 'Arsenal', sans-serif;
 	text-align: center;
-	width: 300px;
 	font-weight: 100;
 	font-size: 16px;
 	font-style: bold;
@@ -10,6 +9,14 @@
 	box-sizing: border-box;
 }
 
+#mobileStarted {
+	display: block;
+	font-size: 40px;
+}
+
+#mobileStarted i {
+	padding: 2em 1em 1em;
+}
 
 .stopButton {
 	font-size: 80px;
@@ -39,11 +46,11 @@ p {
 }
 
 footer {
-	border-top: 2px solid #c7ffdd;
 	text-align: center;
 	font-size: 14px;
 	padding: 20px;
 	font-family: 'IM Fell Double Pica', serif;
+	border-top: 2px solid #c7ffdd;
 }
 
 footer .fa-angle-double-up {
@@ -54,15 +61,54 @@ footer span {
 	text-transform: uppercase;
 }
 
+
+/**about and social info footers and navs**/
+
+footer:hover {
+	background-color: #c7ffdd;
+	color: black;
+	cursor: pointer;
+}
+
+#topBar:hover {
+	background-color: #c7ffdd;
+	color: black;
+	cursor: pointer;
+}
+
+#topBar a {
+	text-decoration: none;
+}
+
+.social a.black {
+	color: black;
+}
+
+#longFooter {
+	display: none;
+}
+
+#longFooter.expand {
+	display: block;
+	color: #c7ffdd;
+	background-color: black;
+}
+
+footer.expand {
+	color: #c7ffdd;
+	background-color: black;
+}
+
 /**LANDING PAGE**/
 
 section.main {
 	display: flex;
 	justify-content: center;
 	color: #c7ffdd;
+	height: 100vh;
 }
 
-header.landingPage {
+header#landingPage {
 	margin: auto;
 	padding: 20px;
 	width: 85%;
@@ -71,7 +117,7 @@ header.landingPage {
 	text-align: center;
 }
 
-.landingPage h1 {
+#landingPage h1 {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -80,38 +126,22 @@ header.landingPage {
 	border-top: 2px solid #c7ffdd;
 }
 
-.landingPage h2 {
+#landingPage h2 {
 	font-family: 'IM Fell Double Pica', serif;
 	font-size: 20px;
 	padding-bottom: 20px;
 	border-bottom: 2px solid #c7ffdd;
 }
 
-
-#getStarted {
-	border: 2px solid #dbdcff;
-	color: #dbdcff;
-	margin: 30px;
-	padding: 0.5em;
-}
-
-#getStarted a {
+#mobileStarted a,
+footer a,
+.social a {
 	text-decoration: none;
-	color: #dbdcff;
+	color: #c7ffdd;
 }
 
-#getstarted span:hover {
- 	display: none;
- 	text-decoration: none;
-}
-
-#getStarted:hover {
-	color: black;
-	background-color: #dbdcff;
-}
-
-#getStarted:hover:before {
-	content:"Let's go!";
+footer a {
+	text-decoration: underline;
 }
 
 /** FILM PAGE **/
@@ -268,7 +298,7 @@ header.landingPage {
 	display: none;
 }
 
-.expandFooter i {
+.expand i {
 	font-size: 30px;
 	padding: 10px;
 }
@@ -371,13 +401,11 @@ nav#topBar i {
 	display: none; /** hide with display none**/
 }
 
-#mobileStarted {
-	display: none;
-}
-
 .mobileButton {
 	display: none;
 }
+
+
 
 /** MOBILE CODE **/
 
@@ -433,28 +461,16 @@ nav#topBar i {
 		padding-right: 100px;
 	}	
 
-	.landingPage h1 {
+	#landingPage h1 {
 		font-size: 30px;
 	}
 
-	.landingPage h2 {
+	#landingPage h2 {
 		font-size: 15px;
 	}
 
-	#getStarted {
-		display: none;
-	}
 
 	/**need to see if can get slide working**/
-
-	#mobileStarted {
-		display: block;
-		font-size: 40px;
-	}
-
-	#mobileStarted i {
-		padding: 2em 1em 1em;
-	}
 
 	.eternal aside {
 		display: none;
@@ -482,6 +498,10 @@ nav#topBar i {
 		margin: 2em;
 	}
 
+	.mobileButton a {
+		text-decoration: none;
+	}
+
 	#prestigeMobileButton {
 		border: 2px solid #dbdcff;	
 		color: #dbdcff;
@@ -489,6 +509,9 @@ nav#topBar i {
 
 	#pulpMobileButton {
 		border: 2px solid #ffddc7;
+	}
+
+	#pulpMobileButton a {
 		color: #ffddc7;
 	}
 
