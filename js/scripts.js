@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	console.log("ready");
+/**button messages**/
 	$("#eternalButton").click(function () {
 		alert("Sorry, Lacuna Inc. isn't quite ready yet... Coming soon!");
 	});
@@ -12,17 +12,22 @@ $(document).ready(function () {
 	$("#prestigeMobileButton").click(function () {
 		alert("Sorry, Tesla is fixing this glitch... Not quite ready!");
 	});
+/**slide**/
 	$("#mobileStarted a").click(slideToPage);
+/**footer toggle**/
 	$("#normalFooter").click(expandFooter);
+/**fixing colors on topbar hover**/
 	$("#topBar").hover(function (){
 		$("#topBar a").attr("class", "black");
 		}, function (){
 			$("#topBar a").removeClass("black");
 	});
+/**expand About in Nav**/
 	$(".social div").click(expandNav);
 	$(".burger").click(expandNav);
+/**calculation width of window and assigning**/
 	var w = $(window).width();
- 	$("#mobilePadding").css("width", w);
+ 	$("#blankPadding").css("width", w);
  	console.log(w);
 });
 
@@ -34,26 +39,25 @@ function slideToPage () {
 
 function expandFooter () {
 	$("#longFooter").toggleClass("expand");
+	$("footer").toggleClass("expand");
 	$('html, body').animate({
           scrollTop: $("footer").offset().top + $('window').height()
         }, 2000);
-	$("footer").toggleClass("expand");
+/**arrow switch in footer**/
+	if ($("footer").hasClass("expand")) {
+		$("div .plain").hide("2000");
+		$("div .clicked").show("2000");	
+		}
+
+	else {
+		$("div .clicked").hide("2000");
+		$("div .plain").show("2000");
+		console.log("DONE");
 	}
+}
 
 function expandNav () {
 	$(".aboutNav").toggleClass("extendAbout");
 }
-/**help!!!!**/
-	if ($("#longfooter").hasClass("expand")) {
-		$(".fa-angle-double-down").show();
-		$("fa-angle-double-up").hide();
-		}
-
-	else {
-		$("fa-angle-double-up").show();
-		$("fa-angle-double-down").hide();
-		console.log("DONE");
-	}
-/**fix above**/
 
 

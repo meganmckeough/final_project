@@ -53,7 +53,8 @@ footer {
 	border-top: 2px solid #c7ffdd;
 }
 
-footer .fa-angle-double-up {
+footer .fa-angle-double-up,
+footer .fa-angle-double-down {
 	font-size: 20px;
 }
 
@@ -94,6 +95,10 @@ footer:hover {
 	display: block;
 	color: #c7ffdd;
 	background-color: black;
+}
+
+div .clicked {
+	display: none;
 }
 
 footer.expand {
@@ -340,6 +345,10 @@ footer a {
 	display: none;
 }
 
+.burger:hover {
+	cursor: pointer;
+}
+
 .pulpPage header {
 	position: fixed;
 	width: 100%;
@@ -381,9 +390,8 @@ footer a {
 	width: 300px;
 }
 
-#blankPadding div {
+div#blankPadding {
 	height: 100px;
-	width: 80%;
 }
 
 #mobilePadding div {
@@ -433,6 +441,12 @@ nav#topBar i {
 	padding: 0 0.3em;
 }
 
+.mobileButton {
+	display: none;
+}
+
+
+/**what to do with this???**/
 .cover {
 	display: flex;
 	justify-content: center;
@@ -441,14 +455,8 @@ nav#topBar i {
 .cover img {  
 	width: auto;
 	height: 400px;
-	display: none; /** hide with display none**/
-}
-
-.mobileButton {
 	display: none;
 }
-
-
 
 /** MOBILE CODE **/
 
@@ -582,14 +590,31 @@ nav#topBar i {
 		text-align: right;
 	}
 
+
+
+/**what to do with this???**/
+	.cover {
+		display: flex;
+		justify-content: center;
+	}
+
+	.cover img {  
+		width: auto;
+		height: 400px;
+		display: none;
+	}
+
+
+
+
 /**once this is fixed mobile is done**/
-	#blankPadding div {
+/*	#blankPadding div {
 		display: none;
 	}
 
 	#mobilePadding div {
 		display: block;
 		height: 100px;
-	}
+	}*/
 }
 
