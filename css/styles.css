@@ -1,3 +1,5 @@
+/*buttons*/
+
 .button {
 	font-family: 'Arsenal', sans-serif;
 	text-align: center;
@@ -35,6 +37,12 @@
 	display: none;
 }
 
+.mobileButton {
+	display: none;
+}
+
+
+/*large scale css*/
 body {
 	background-color: black;
 }
@@ -45,6 +53,11 @@ p {
 	font-family: 'Arsenal', sans-serif;
 }
 
+window {
+	overflow: scroll;
+}
+
+/**about and social info footers and navs**/
 footer {
 	text-align: center;
 	font-size: 14px;
@@ -61,9 +74,6 @@ footer .fa-angle-double-down {
 footer span {
 	text-transform: uppercase;
 }
-
-
-/**about and social info footers and navs**/
 
 footer:hover {
 	background-color: #c7ffdd;
@@ -107,7 +117,7 @@ footer.expand {
 	line-height: 1.5;
 }
 
-/**LANDING PAGE**/
+/**LANDING PAGE ITEMS**/
 
 section.main {
 	display: flex;
@@ -141,6 +151,7 @@ header#landingPage {
 	border-bottom: 2px solid #c7ffdd;
 }
 
+/* a tags*/
 #mobileStarted a,
 footer a,
 .social a {
@@ -221,8 +232,6 @@ footer a {
 	display: flex;
 	justify-content: flex-end;
 }
-
-/**class for these buttons?**/
 
 #pulpButton {
 	border: 2px solid #ffddc7;
@@ -313,6 +322,7 @@ footer a {
 
 /**PULP FICTION PAGE**/
 
+/*top nav*/
 .social div {
 	cursor: pointer;
 }
@@ -349,6 +359,30 @@ footer a {
 	cursor: pointer;
 }
 
+nav#topBar {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #c7ffdd;
+	font-size: 14px;
+	font-family: 'IM Fell Double Pica', serif;
+	color: #c7ffdd;
+	padding: 1em;
+}
+
+nav#topBar .social {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+nav#topBar span {
+	text-transform: uppercase;
+}
+
+nav#topBar i {
+	padding: 0 0.3em;
+}
+
+/*main section*/
 .pulpPage header {
 	position: fixed;
 	width: 100%;
@@ -364,6 +398,12 @@ footer a {
 	color: #D81616;
 	padding: 1em 1em 0.5em;
 	text-align: center;
+}
+
+.pulpContent {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .pulpInOrder {
@@ -390,13 +430,20 @@ footer a {
 	width: 300px;
 }
 
-div#blankPadding {
-	height: 100px;
+main.horizontal {
+	display: flex; 
+	justify-content: space-between;
+	flex-direction: row;
 }
 
+div#blankPadding {
+	height: 100px;
+	min-width: 1100px;
+}
+/*
 #mobilePadding div {
 	display: none;
-}
+}*/
 
 section.start {
 	padding-left: 75px;
@@ -411,43 +458,29 @@ section.end {
 section.scroll {
 	color: #D81616;
 	padding: 30px 50px;
-	position: fixed;
 }
 
+section.scroll p {
+	font-size: 30px;
+}
 
-/**house some of the below in media queries**/
-
-
-nav#topBar {
+ul {
 	display: flex;
-	justify-content: space-between;
-	border-bottom: 2px solid #c7ffdd;
-	font-size: 14px;
-	font-family: 'IM Fell Double Pica', serif;
-	color: #c7ffdd;
-	padding: 1em;
+	flex-direction: row;
+	list-style-type: none;
+	align-items: center;
 }
 
-nav#topBar .social {
-	display: flex;
-	flex-wrap: nowrap;
-}
+/*.slide {
+	opacity: 0;
+}*/
 
-nav#topBar span {
-	text-transform: uppercase;
-}
-
-nav#topBar i {
-	padding: 0 0.3em;
-}
-
-.mobileButton {
-	display: none;
-}
-
+/*.pulpSlide1.show {
+	opacity: 1; 
+}*/
 
 /**what to do with this???**/
-.cover {
+/*.cover {
 	display: flex;
 	justify-content: center;
 }
@@ -456,7 +489,7 @@ nav#topBar i {
 	width: auto;
 	height: 400px;
 	display: none;
-}
+}*/
 
 /** MOBILE CODE **/
 
@@ -481,15 +514,15 @@ nav#topBar i {
 		background-color: rgba(255, 255, 255, 0.7);
 	}
 
-	#blankPadding div {
-		display: none;
+	div#blankPadding {
+		height: 100px;
+		min-width: 768px;
 	}
 
-	#mobilePadding div {
+/*	#mobilePadding div {
 		display: block;
 		height: 100px;
-	}
-
+	}*/
 }
 /** PHONE - do smaller just button version for phone - this is definitely not working**/
 
@@ -590,10 +623,13 @@ nav#topBar i {
 		text-align: right;
 	}
 
-
+	div#blankPadding {
+		height: 100px;
+		min-width: 400px;
+	}
 
 /**what to do with this???**/
-	.cover {
+/*	.cover {
 		display: flex;
 		justify-content: center;
 	}
@@ -602,7 +638,7 @@ nav#topBar i {
 		width: auto;
 		height: 400px;
 		display: none;
-	}
+	}*/
 
 
 

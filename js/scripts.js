@@ -25,11 +25,49 @@ $(document).ready(function () {
 /**expand About in Nav**/
 	$(".social div").click(expandNav);
 	$(".burger").click(expandNav);
-/**calculation width of window and assigning**/
+/**calculation width of window and assigning - redundant**/
 	var w = $(window).width();
  	$("#blankPadding").css("width", w);
  	console.log(w);
+/*scrolling*/
+
+	$(".my-slider").unslider({
+		autoplay: true
+	});
+
+	// $(window).scroll(function() {    
+	//     var scroll = $(window).scrollLeft();
+	//     var slideElement1 = $($(".pulpSlide1"));
+	//     var getPosition = slideElement1.offset().left;
+
+	//     if (scroll == getPosition) {
+	//         $(".pulpSlide1").removeClass("slide");
+	//     }
+	//    console.log("scroll:" + scroll + "getPos:" + getPosition);
+	// });
 });
+
+
+// 	function checkIfEnd(e) {
+// 	  var scrollSection = $(e.currentTarget); // grab the section that is scrollable
+
+// 	  var totalScrollWidth = scrollSection[0].scrollWidth; // total scroll length
+// 	  var leftPosition = scrollSection.scrollLeft(); // current length that has been scrolled
+// 	  var totalWidthNoScroll = scrollSection.outerWidth(); // total length (without scroll)
+
+// 	  if (totalScrollWidth - leftPosition == totalWidthNoScroll) {
+// 	    console.log("end of scroll");
+
+// 	  } else if (leftPosition == 0) {
+// 	    console.log("start of scroll");
+// 	  } else if (totalWidthNoScroll >= $("#specialMoment").offset().left) {
+// 	    // console.log("Reached special moment");
+// 	  }
+
+// 	  console.log("width:" + totalWidthNoScroll);
+// 	  console.log("whereisdiv:" + $("#specialMoment").offset().left);
+// }
+
 
 function slideToPage () {
 	var page = $($(this).attr("href"));
@@ -59,5 +97,7 @@ function expandFooter () {
 function expandNav () {
 	$(".aboutNav").toggleClass("extendAbout");
 }
+
+
 
 
