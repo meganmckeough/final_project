@@ -29,11 +29,13 @@ $(document).ready(function () {
 	var w = $(window).width();
  	$("#blankPadding").css("width", w);
  	console.log(w);
+
+ 	var h = $(window).height();
+ 	$("#blankPadding").css("height", h);
+ 	console.log(w);
 /*scrolling*/
 
-	$(".my-slider").unslider({
-		autoplay: true
-	});
+
 
 	// $(window).scroll(function() {    
 	//     var scroll = $(window).scrollLeft();

@@ -53,9 +53,6 @@ p {
 	font-family: 'Arsenal', sans-serif;
 }
 
-window {
-	overflow: scroll;
-}
 
 /**about and social info footers and navs**/
 footer {
@@ -412,11 +409,10 @@ nav#topBar i {
 	align-items: center;
 	color: #D81616;
 	text-align: center;	
- /**  put on display none so can set up mobile page**/
 }
 
 .pulpInOrder img {
-	width: 300px;
+	width: 600px;
 	margin: 20px;
 	border-top: 2px dotted #D81616;
 	border-bottom: 2px dotted #D81616;
@@ -427,18 +423,21 @@ nav#topBar i {
 	margin: 5px;
 	border-right: 2px dotted #D81616;
 	border-left: 2px dotted #D81616;
-	width: 300px;
+	width: 600px;
+	font-size: 20px;
 }
 
 main.horizontal {
 	display: flex; 
 	justify-content: space-between;
 	flex-direction: row;
+	align-items: flex-start;
 }
 
 div#blankPadding {
 	height: 100px;
 	min-width: 1100px;
+	margin-left: 50px;
 }
 /*
 #mobilePadding div {
@@ -462,6 +461,7 @@ section.scroll {
 
 section.scroll p {
 	font-size: 30px;
+	border: none;
 }
 
 ul {
@@ -469,6 +469,60 @@ ul {
 	flex-direction: row;
 	list-style-type: none;
 	align-items: center;
+}
+
+i.fa-long-arrow-down {
+	font-size: 40px;
+}
+
+i.fa-long-arrow-right {
+	font-size: 40px;
+	padding-left: 10px;
+}
+
+i.fa-long-arrow-left {
+	font-size: 40px;
+}
+
+#blankPadding.arrowDown {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#blankPadding.arrowDown #down p {
+	justify-content: flex-end;
+	padding-right: 0.2em;
+	text-align: right;
+}
+
+#blankPadding.arrowDown #left p {
+	justify-content: flex-end;
+	padding-top: 400px;
+	text-align: right;
+}
+
+main.reverse {
+	display: flex;
+	flex-direction: row;
+}
+
+.scroll#left {
+	display: flex;
+	align-content: flex-end;
+}
+
+.scroll#down {
+	margin-top: 2em;
+	margin-right: 1em;
+}
+
+.reverse .pulpInOrder {
+	padding-bottom: 100px;
+}
+
+.scroll#down p {
+	margin-right: 0;
 }
 
 /*.slide {
@@ -627,6 +681,16 @@ ul {
 		height: 100px;
 		min-width: 400px;
 	}
+
+	#blankPadding .scroll p {
+		width: 250px;
+	}
+
+	#blankPadding .scroll#down {
+
+	}
+
+
 
 /**what to do with this???**/
 /*	.cover {
